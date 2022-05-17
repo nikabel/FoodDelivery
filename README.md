@@ -1,4 +1,27 @@
-# FS_Course_work-Group22
-Figma: https://www.figma.com/file/jWELWVenZPfv5SlHdT4JdS/%D0%94%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B5%D0%B4%D1%8B?node-id=0%3A1
-Gmail: log: fsworkgroup2@gmail.com pass: 1Fsworkgroup2
-MongoDb Cloud: log: fsworkgroup2@gmail.com pass: Front3nd
+# FoodDelivery
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
