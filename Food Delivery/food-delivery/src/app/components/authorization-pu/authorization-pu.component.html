@@ -1,0 +1,22 @@
+<div class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <h1 class="modal__title">Авторизация</h1>
+            <button class="modal__button-close" [routerLink]="['/restaurants']">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body__item">
+                <div class="modal-body__item__title">E-mail</div>
+                <input type="text" class="modal-body__item__input-box">
+            </div>
+            <div class="modal-body__item">
+                <div class="modal-body__item__title">Пароль</div>
+                <input type="text" class="modal-body__item__input-box">
+            </div>
+        </div>
+        <div class="modal-buttons">
+            <button class="modal__button-submit" [routerLink]="['/restaurants']">Войти</button>
+            <button class="modal__button-reg" [routerLink]="['/registration']" (click)="showForm()">Регистрация</button>
+        </div>
+    </div>
+</div>

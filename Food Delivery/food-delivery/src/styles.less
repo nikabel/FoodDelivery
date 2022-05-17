@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.owl-theme .owl-nav [class*=owl-],.owl-theme .owl-nav [class*=owl-]:hover {
+    background: inherit;
+}
+.owl-carousel .owl-nav .owl-prev {
+    position: absolute;
+    left: 0;
+    top: 32%;
+    background: inherit !important;
+}
+.owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    right: -10px;
+    top: 32%;
+    background: inherit !important;
+}
+
+@media screen and (max-width:576px) {
+    .owl-carousel .owl-nav .owl-prev img,.owl-carousel .owl-nav .owl-next img{
+        width: 31px;
+    }
+}

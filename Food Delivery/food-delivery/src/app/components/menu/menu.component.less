@@ -1,0 +1,110 @@
+@import "src/styles";
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.menu{
+    &-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__text{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 46px;
+        margin-right: 30px;
+    }
+
+    &__rating{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFC107;
+        margin-right: 27px;
+    }
+
+    &__price{
+        font-size: 18px;
+        line-height: 32px;
+        color: #8C8C8C;
+        margin-right: 24px;
+        position: relative;
+    }
+
+    &__price::after{
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: -13px;
+        width: 5px;
+        height: 5px;
+        background: #8C8C8C;
+        border-radius: 50%;
+    }
+
+    &__category{
+        font-size: 18px;
+        line-height: 32px;
+        color: #8C8C8C;
+    }
+}
+&-body{
+    margin-bottom: 30px;
+    &__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &-item{
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-size: 15px;
+            line-height: 20px;
+            cursor: pointer;
+            outline:none;
+            background: #FF8A00;
+            border: 1px solid #FF8A00;
+            color: #fff;
+
+            &:hover {
+                background-color: #ff5e00;
+                color: white;
+                transition: 0.3s;
+            }
+
+            &__icon{
+                margin-right: 6px;
+            }
+        }
+    }
+
+    &__sortage{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 28px;
+        color: #666565;
+
+        &-text{
+            margin-right: 50px;
+        }
+        &-item1{
+            margin-right: 50px;
+        }
+        &-circle{
+            margin-right: 20px;
+        }
+    }
+}
+    &-list{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+}

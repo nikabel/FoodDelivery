@@ -1,0 +1,47 @@
+@import "src/styles";
+
+.container{
+    max-width: 1100px;
+    margin: 40px 160px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 40px;
+    
+
+    &__logo{
+        display: flex;
+
+        &-text{
+            margin-left: 10px;
+        }
+    }
+
+    &__menu-block{
+        display: flex;
+        align-items: center;
+
+        &__item{
+            padding: 11px 20px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: #FF8A00;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            outline: none;
+
+            &:hover {
+                background-color: #ff5e00;
+                color: white;
+                transition: 0.3s;
+            }
+        }
+    }
+}

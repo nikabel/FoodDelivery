@@ -1,0 +1,17 @@
+<div *ngIf="auth.user$ | async as user"> <div *ngIf="user.email=='fsworkgroup2@gmail.com'">
+<div class="container">
+    <div class="header">
+    <div class="header__logo">
+      <img src='../../../assets/images/logo.svg'>
+      <div class="header__logo-text">Food<br>Delivery</div>
+    </div>
+    <div class="header__menu-block">
+            <button class="header__menu-block__item"  [routerLink]="['/admin', 'createDish']">Добавить блюдо</button>
+    </div>
+</div>
+    <router-outlet></router-outlet>
+</div>
+</div>
+  <h1 *ngIf="user.email!=='fsworkgroup2@gmail.com'">You don't have access to this page!</h1>
+</div>
+

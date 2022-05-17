@@ -1,0 +1,57 @@
+@text-color: #302C34;
+@black: #000000;
+@white: #FFFFFF;
+@import "src/styles";
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.promo{
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+    background: #fff1b8 url(../../../assets/images/promo.png) no-repeat top -2px right 0px / 924px;
+    background-size: contain;
+    border-radius:10px;
+    padding: 68px 70px;
+    margin-bottom: 56px;
+
+    &__title{
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: @text-color;
+    }
+
+    &__text{
+        max-width: 538px;
+        font-size: 16px;
+        line-height: 20px;
+        color: @text-color;
+    }
+}
+.restaurants{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 44px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &__title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        margin: 0;
+        color: @black;
+        margin-right: 30px;
+        margin-bottom: 40px;
+    }
+
+    &__cards{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

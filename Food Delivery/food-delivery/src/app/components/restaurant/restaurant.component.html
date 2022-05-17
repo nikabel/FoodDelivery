@@ -1,0 +1,17 @@
+    <div routerLink='/restaurants/{{restId}}' class="restaurants__card">
+        <div class="restaurants__card-image"> <img [src]="restaurantIcon" width="374" height="250"> </div>
+        <div class="restaurants__card-text">
+            <div class="restaurants__card-header">
+                <h3 class="restaurants__card-title">{{restaurantName}}</h3>
+                <span class="restaurants__card-tag">50 мин</span>
+            </div>
+            <div class="restaurants__card-info">
+                <div class="restaurants__card-rating">
+                    <img src='../../../assets/images/star.svg'>
+                    4.5</div>
+                <span class="restaurants__card-price">От 900 ₽</span>
+                <span class="restaurants__card-category">{{restaurantType}}</span>
+            </div>
+        </div>
+    </div>
+

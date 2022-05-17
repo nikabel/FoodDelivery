@@ -1,0 +1,73 @@
+.menu-list__item{
+        display: flex;
+        align-items: center;
+        width: 1200px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        &-poster{
+            width: 150px;
+            height: 150px;
+        }
+
+        &-image{
+            width: 150px;
+            height: 150px;
+            background-repeat: no-repeat;
+        }
+
+        &-name{
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 32px;
+            color: #000000;
+        }
+
+        &-weight{
+            font-size: 18px;
+            line-height: 32px;
+            color: #000000;
+        }
+
+        &-description{
+            text-align: center;
+            width: 251px;
+            font-size: 15px;
+            line-height: 32px;
+            color: #666565;
+        }
+
+        &-price{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 32px;
+            color: #000000;
+        }
+
+        &-button{
+            display: flex;
+            align-items: center;
+            padding: 11px 16px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            font-size: 15px;
+            line-height: 20px;
+            cursor: pointer;
+            outline:none;
+            background: #FF8A00;
+            border: 1px solid #FF8A00;
+            color: #fff;
+
+            &:hover {
+                background-color: #ff5e00;
+                color: white;
+                transition: 0.3s;
+            }
+
+            &__icon{
+                margin-right: 6px;
+            }
+        }
+}

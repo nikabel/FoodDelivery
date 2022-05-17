@@ -1,0 +1,55 @@
+<div class="form-container">
+    <h2>Изменить блюдо</h2>
+    <form [formGroup]="editForm" novalidate (ngSubmit)="sendForm()">
+        <div class="form-control">
+            <label class="form-control__label" for="name">Название блюда</label>
+            <input type="text" class="form-control__input" name="name" formControlName="name"/>
+            <div *ngIf="editForm.controls['name'].invalid && editForm.controls['name'].touched" class="form-control__alert">Введите название</div>
+        </div>
+    
+        <div class="form-control">
+            <label class="form-control__label" for="price">Цена блюда</label>
+            <input type="text" class="form-control__input" name="price" formControlName="price"/>
+            <div *ngIf="editForm.controls['price'].invalid && editForm.controls['price'].touched" class="form-control__alert">Введите цену</div>
+        </div>
+    
+        <div class="form-control">
+            <label class="form-control__label" for="description">Описание блюда</label>
+            <input type="text" class="form-control__input" name="description" formControlName="description"/>
+            <div *ngIf="editForm.controls['description'].invalid && editForm.controls['description'].touched" class="form-control__alert">Введите описание</div>
+        </div>
+    
+        <div class="form-control">
+            <label class="form-control__label" for="weight">Вес блюда</label>
+            <input type="number" class="form-control__input" name="weight" formControlName="weight"/>
+            <div *ngIf="editForm.controls['weight'].invalid && editForm.controls['weight'].touched" class="form-control__alert">Введите вес</div>
+        </div>
+    
+        <div class="form-control">
+            <label class="form-control__label" for="type">Тип блюда</label>
+            <input type="text" class="form-control__input" name="type" formControlName="type"/>
+            <div *ngIf="editForm.controls['type'].invalid && editForm.controls['type'].touched" class="form-control__alert">Введите тип</div>
+        </div>
+    
+        <div class="form-control">
+            <label for="restaurant">Наименование ресторана</label>
+            <select #selectList class="form-control__input" (change)="onSelect(selectList.value)" id="restaurant" formControlName="restaurant">
+                <option *ngFor="let r of restaurants" value={{r._id}}>{{r._name}}</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label class="form-control__label" for="image">Изображение блюда</label>
+            <input type="text" class="form-control__input" name="image" formControlName="image"/>
+            <div *ngIf="editForm.controls['image'].invalid && editForm.controls['image'].touched" class="form-control__alert">Введите путь к изображению</div>
+        </div>
+        
+        
+        <button type="submit" [disabled]="!editForm.valid" class="form__button">
+            Сохранить изменения записи
+        </button>
+        <button  class="form__button" [routerLink]="['/admin', 'information']">
+            Выход
+        </button>
+    </form>
+</div>

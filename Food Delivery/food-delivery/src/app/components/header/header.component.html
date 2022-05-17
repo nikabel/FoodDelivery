@@ -1,0 +1,25 @@
+<div class="header">
+  <a [routerLink]="['/restaurants']"><div class="header__logo">
+    <img src='../../../assets/images/logo.svg'>
+    <div class="header__logo-text">Food<br>Delivery</div>
+  </div></a>
+  <input type="text" class="header__input-box" placeholder="Найди свой ресторан...">
+  <p class="header__welcome-text" *ngIf="auth.user$ | async as user">{{user.email}}</p>
+  <div class="header__buttons">
+    <button  class="header__button-log-in"  (click)="showAuth()">
+      <div class="header__button-icon">
+        <img src='../../../assets/images/user.svg'>
+      </div>
+      <span class="header__button-text" (click)="loginWithRedirect()" *ngIf="(auth.isAuthenticated$ | async) === false">Войти</span>
+      <span class="header__button-text" (click)="logout()" *ngIf="(auth.isAuthenticated$ | async) ">Выйти</span>
+    </button>
+    <button class="header__button-cart" (click)="showCart()">
+      <div class="header__button-icon">
+        <img class="header__button-cart__icon" src='../../../assets/images/cart.svg'>
+      </div>
+      <span class="header__button-text">Корзина</span>
+    </button>
+  </div>
+</div>
+<app-cart-pu *ngIf="cart"></app-cart-pu>
+

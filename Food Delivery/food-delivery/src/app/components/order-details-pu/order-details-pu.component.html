@@ -1,0 +1,31 @@
+<div #modal class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <h1 class="modal__title">Оформление заказа</h1>
+            <button class="modal__button-close" (click)="close()">&times;</button>
+        </div>
+        <form [formGroup]="createForm" novalidate class="modal-body" (ngSubmit)="onSubmit()">
+            <div class="modal-body__item">
+                <label class="modal-body__item__title" for="telephone">Телефон</label>
+                <input type="tel" placeholder="+7 (900) 123-45-67" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" name="telephone" class="modal-body__item__input-box" formControlName="telephone">
+            </div>
+            <div *ngIf="createForm.controls['telephone'].invalid && createForm.controls['telephone'].touched" class="form-control__alert">Введите корректно телефон</div>
+            <div class="modal-body__item">
+                <label class="modal-body__item__title" for="address">Адрес доставки</label>
+                <input type="text" name="address" class="modal-body__item__input-box" formControlName="address">
+            </div>
+            <div *ngIf="createForm.controls['address'].invalid && createForm.controls['address'].touched" class="form-control__alert">Введите адрес</div>
+            <div class="modal-body__item">
+                <label class="modal-body__item__title" for="payment">Способ оплаты</label>
+                <select class="modal-body__item__select" name="payment" formControlName="payment">
+                    <option>Картой</option>
+                    <option>Наличными при получении</option>
+                    <option>Картой при получении</option>
+                </select>
+            </div>
+            <div class="modal-body__text">Итого к оплате: <span class="modal-body__text-price">{{totalPrice}}</span></div>
+        </form>
+        <button class="modal__button-submit" (click)="show()">Заказать</button>
+    </div>
+</div>
+<app-completed-pu  *ngIf="showed"></app-completed-pu>

@@ -1,0 +1,15 @@
+<div class="menu-list__item">
+    <div class="menu-list__item-poster">
+      <img class="menu-list__item-image" src = "{{dishIcon}}"  > 
+    </div>
+    <h3 class="menu-list__item-name">{{dishName}}</h3>
+    <span class="menu-list__item-weight">{{dishWeight}}</span>
+    <p class="menu-list__item-description">{{dishDescription}}</p>
+    <span class="menu-list__item-price">{{dishPrice}}</span>
+    <button class="menu-list__item-button" (click)="addProductToCart()">
+        <div class="menu-list__item-button__icon">
+            <img src='../../../assets/images/white-cart.svg'>
+        </div>
+        <span class="menu-list__item-button__text">В корзину</span>
+    </button>
+</div>

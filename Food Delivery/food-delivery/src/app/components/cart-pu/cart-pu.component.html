@@ -1,0 +1,28 @@
+<div #modal class="modal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h3 class="modal-header__title">Корзина</h3>
+            <button class="modal-header__button-close" (click)="close()">&times;</button>
+        </div>
+        <div class="modal-body">
+<!--            <h3 class="modal-body__rest-name">Тануки</h3>-->
+
+            <app-dish-in-cart *ngFor="let iter of cartItems" [dish]="iter"></app-dish-in-cart>
+            <!--<div class="modal-body__item">
+                <span class="modal-body__item-name">Доставка</span>
+                <div class="modal-body__item-price">250&nbsp;₽</div>
+            </div>-->
+        </div>
+
+        <div class="modal-footer">
+          <div class="modal-footer__text">ДОСТАВКА: <span class="modal-footer__text-price">250</span></div>
+            <div class="modal-footer__text">ИТОГО: <span class="modal-footer__text-price">{{totalPrice}}</span></div>
+
+            <div class="modal-footer__buttons">
+                <button class="modal-footer__button-submit" (click)="show()">Оформить заказ</button>
+                <button class="modal-footer__button-exit" (click)="close()">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-order-details-pu *ngIf="showed"></app-order-details-pu>

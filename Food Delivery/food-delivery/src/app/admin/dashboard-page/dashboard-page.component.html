@@ -1,0 +1,32 @@
+<div>
+    <div class="search-dish">
+        <input class="search-dish__input" type="text" placeholder="Найти блюдо..." [(ngModel)]="searchStr">
+    </div>
+    <table class="dish-table">
+        <thead class="dish-table__head">
+        <tr>
+            <th class="dish-table__column">Номер</th>
+            <th class="dish-table__column">Название</th>
+            <th class="dish-table__column">Цена</th>
+            <th class="dish-table__column">Описание</th>
+            <th class="dish-table__column">Вес</th>
+            <th class="dish-table__column">Тип</th>
+            <th class="dish-table__column">Действие</th>
+        </tr>
+        </thead>
+        <tbody class="dish-table__body">
+        <tr *ngFor="let dish of dishes | searchDishes:searchStr; let n = index;">
+            <td class="dish-table__column" data-label="Номер">{{ n + 1 }}</td>
+            <td class="dish-table__column" data-label="Название">{{ dish._name }}</td>
+            <td class="dish-table__column" data-label="Цена">{{ dish._price }}</td>
+            <td class="dish-table__column" data-label="Описание">{{ dish._description }}</td>
+            <td class="dish-table__column" data-label="Вес">{{ dish._weight }}</td>
+            <td class="dish-table__column" data-label="Тип">{{ dish._foodType }}</td>
+            <td class="dish-table__column" data-label="Действие">
+                <button class="dish-table__button" [routerLink]="['/admin', 'editDish', dish._id]">Редактировать</button>
+                <button class="dish-table__button" (click)="deleteDish(dish._id)">Удалить</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

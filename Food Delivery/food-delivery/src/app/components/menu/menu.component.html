@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="menu-title">
+        <h2 class="menu-title__text">{{restaurantName}}</h2>
+        <div class="menu-title__rating">
+            <img src='../../../assets/images/star.svg'>
+            4.5</div>
+        <span class="menu-title__price">От 900 ₽</span>
+        <span class="menu-title__category">{{restaurantType}}</span>
+    </div>
+    <div class="menu-body">
+        <div class="menu-body__buttons">
+            <button class="menu-body__buttons-item" (click)="showFood('Суши')">
+                <div class="menu-body__buttons-item__icon">
+                    <img src='../../../assets/images/sushi-icon.svg'>
+                </div>
+                <span class="menu-body__buttons-item__text">Суши</span>
+            </button>
+            <button class="menu-body__buttons-item" (click)="showFood('Суп')">
+                <div class="menu-body__buttons-item__icon">
+                    <img src='../../../assets/images/soup-icon.svg'>
+                </div>
+                <span class="menu-body__buttons-item__text">Супы</span>
+            </button>
+            <button class="menu-body__buttons-item" (click)="showFood('Горячее')">
+                <div class="menu-body__buttons-item__icon">
+                    <img src='../../../assets/images/noodles-icon.svg'>
+                </div>
+                <span class="menu-body__buttons-item__text">Горячее</span>
+            </button>
+            <button class="menu-body__buttons-item" (click)="showFood('Десерт')">
+                <div class="menu-body__buttons-item__icon">
+                    <img src='../../../assets/images/cake-icon.svg'>
+                </div>
+                <span class="menu-body__buttons-item__text">Десерты</span>
+            </button>
+            <button class="menu-body__buttons-item" (click)="showFood('Напиток')">
+                <div class="menu-body__buttons-item__icon">
+                    <img src='../../../assets/images/green-tea-icon.svg'>
+                </div>
+                <span class="menu-body__buttons-item__text">Напитки</span>
+            </button>
+        </div>
+        <div class="menu-body__sortage">
+            <h3 class="menu-body__sortage-text">Сортировка:</h3>
+            <div class="menu-body__sortage-item1">
+                <input class="menu-body__sortage-circle"  name="sortage" value="name" type="radio" [(ngModel)]="sort">
+                По названию
+            </div>
+            <div>
+                <input class="menu-body__sortage-circle" name="sortage" value="price" type="radio" [(ngModel)]="sort">По цене
+            </div>
+        </div>
+    </div>
+    <div class="menu-list" *ngIf="!filtered">
+        <app-dish  *ngFor="let iter of dishList | sorting:sort" [dish]="iter"></app-dish>
+    </div>
+    <div class="menu-list" *ngIf="filtered">
+        <app-dish  *ngFor="let iter of filteredDishList | sorting:sort" [dish]="iter"></app-dish>
+    </div>
+</div>

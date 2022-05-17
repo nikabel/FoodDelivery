@@ -1,0 +1,45 @@
+.footer{
+    margin: auto;
+    background-color: #DEDEDE;
+
+    &-block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 40px 160px 0;
+        padding: 30px 0;
+
+        &__logo{
+            display: flex;
+
+            &-text{
+                margin-left: 10px;
+            }
+        }
+
+        &__text{
+            color: #666565;
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        &__social-links{
+            display: flex;
+            align-items: center;
+        }
+
+        &__social-link{
+            margin-right: 20px;
+            cursor: pointer;
+
+            &-vk{
+                cursor: pointer;
+            }
+
+            &:hover path, &-vk:hover path{
+                fill:#FF8A00;
+                transition: 0.3s;
+            }
+        }
+    }
+}
